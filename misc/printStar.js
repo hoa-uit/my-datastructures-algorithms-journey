@@ -1,3 +1,18 @@
+const readline = require('node:readline')
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+let height;
+rl.question(`What's your tree height?`, number => {
+    // console.log(`Hi ${name}!`);
+    height = number;
+    printStar1(height);
+
+    rl.close();
+});
+
 let noStar = -1;
 const printStar1 = (n) => {
     for (let i = 0; i < n; i++) {
@@ -22,7 +37,6 @@ const printStar1 = (n) => {
     console.log(space1 + '|');
 }
 
-printStar1(4);
 
 
 //    * 
