@@ -24,20 +24,20 @@ root.rightNode.rightNode = new TreeNode(6);
 root.leftNode.leftNode.leftNode = new TreeNode(8);
 
 
-const countPath = (node, sum, pathValues, paths) => {
+const countPath = (node, sum, pathValues) => {
     if (node == null) {
         return;
     }
-    console.log('node: ', node.value);
+
     pathValues.push(node.value);
-    console.log('pathValues: ', pathValues);
+
     if (node.value == sum && node.leftNode == null && node.rightNode == null) {
         count++;
         paths.push([...pathValues]);
     }
     else {
-        countPath(node.leftNode, sum - node.value, pathValues, paths);
-        countPath(node.rightNode, sum - node.value, pathValues, paths);
+        countPath(node.leftNode, sum - node.value, pathValues);
+        countPath(node.rightNode, sum - node.value, pathValues);
 
     }
 
@@ -57,6 +57,6 @@ let count = 0;
 const paths = [];
 const pathValues = [];
 
-countPath(root, 10, pathValues, paths);
+countPath(root, 10, pathValues);
 console.log(count);
 console.log(paths);
