@@ -28,7 +28,7 @@ const maximumGain = (s: string, x: number, y: number) => {
 
 
         if (stack.length > 0 && stack[stack.length - 1] + s[i] === bigPointString) {
-            stack.pop;
+            stack.pop();
             sumPoints = sumPoints + bigPoint;
         }
         else {
@@ -52,5 +52,5 @@ const maximumGain = (s: string, x: number, y: number) => {
 }
 
 
-const string = "cdbcbbaaabab";
-console.log(maximumGain(string, 4, 5))
+const string = "aabbaaxybbaabb";
+console.log(maximumGain(string, 5, 4))
