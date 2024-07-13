@@ -1,1 +1,1 @@
-## Let's grok coding skills in DSA
+# I HATE DSA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
