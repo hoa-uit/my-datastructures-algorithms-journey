@@ -37,6 +37,21 @@ const printStar1 = (n) => {
     console.log(space1 + '|');
 }
 
+// use repeat func
+const printChristmasTree = (height) => {
+    for (let i = 1; i <= height; i++) {
+        const starNum = i*2 - 1;
+        const stars = "*".repeat(starNum);
+        const space = " ".repeat(height - i);
+        console.log(space + stars);
+    }
+
+    console.log((" ".repeat((height*2 - 1)/2)) + "|");
+    console.log((" ".repeat((height*2 - 1)/2)) + "|");
+
+}
+
+printChristmasTree(8);
 
 
 //    * 
